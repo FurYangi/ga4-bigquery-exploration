@@ -1,6 +1,18 @@
-# ga4-bigquery-exploration
+# GA4 + BigQuery Exploration
 
-Exploring GA4 event data in BigQuery using Google's public sample ecommerce dataset (bigquery-public-data.ga4_obfuscated_sample_ecommerce), following the walkthrough at ga4bigquery.com.
+Exploring Google Analytics 4 (GA4) event-level data in BigQuery, using Google's public sample ecommerce dataset (`bigquery-public-data.ga4_obfuscated_sample_ecommerce`). Built as a hands-on follow-along of the walkthrough at ga4bigquery.com to practice writing analytical SQL directly against raw event data.
+
+## Overview
+
+GA4 exports raw, event-level data to BigQuery rather than pre-aggregated tables, so most analysis starts with unnesting and aggregating events yourself. This project works through that pattern: counting events, tracking daily active users, summarizing purchases and revenue, and ranking products, all with plain SQL.
+
+## Dataset
+
+`bigquery-public-data.ga4_obfuscated_sample_ecommerce` is a public, obfuscated GA4 export covering roughly 92 days (Nov 2020 - Jan 2021) of ecommerce event data.
+
+## Tools
+
+BigQuery (Standard SQL), run under BigQuery's free Sandbox mode.
 
 ## Queries
 
@@ -79,5 +91,4 @@ Unnests the repeated items field on purchase events to rank products by total re
 
 ## Notes
 
-- All queries ran for free under BigQuery's Sandbox mode, no billing account needed.
-- The sample dataset is intentionally obfuscated by Google, so transaction counts and revenue will not perfectly reconcile the way a real store's data would.
+All queries ran for free under BigQuery's Sandbox mode, no billing account needed. The sample dataset is intentionally obfuscated by Google, so transaction counts and revenue won't perfectly reconcile the way a real store's data would.
