@@ -46,9 +46,9 @@ Every query in `queries/` runs for free against Google's public dataset, no down
 3. Open the query editor and paste in the contents of any file from `queries/`, for example `queries/01_events_by_day_and_type.sql`.
 4. Click Run. Results appear in the console below the editor.
 
-5. Alternatively, with the [bq command-line tool](https://cloud.google.com/bigquery/docs/bq-command-line-tool) installed and authenticated:
+Alternatively, with the [bq command-line tool](https://cloud.google.com/bigquery/docs/bq-command-line-tool) installed and authenticated:
 
-6. ```bash
+```bash
 bq query --use_legacy_sql=false < queries/01_events_by_day_and_type.sql
 ```
 
